@@ -1,0 +1,26 @@
+{
+  "name": "NLW",
+  "version": "1.0.0",
+  "description": "NEXT LEVEL WEEK",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Belluominus/NLW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Belluominus/NLW/issues"
+  },
+  "homepage": "https://github.com/Belluominus/NLW#readme"
+}
