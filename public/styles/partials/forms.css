@@ -20,11 +20,12 @@
   font-family: Archivo;
 }
 .textarea-block textarea{
-  padding: 1..2rem 1.6rem;
+  padding: 1.2rem 1.6rem;
   height: 16rem;
   resize: vertical;
 }
-.input-block{
+.input-block,
+.textarea-block{
   position: relative;
 }
 .input-block:focus-within::after,
@@ -35,6 +36,5 @@
   background: var(--color-primary-light);
   position: absolute;
   left: 1.6rem;
-  right: 1.6rem;
   bottom: 0;
 }
