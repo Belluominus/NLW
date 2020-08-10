@@ -21,7 +21,7 @@ const weekdays =[
 ]
 
 function getSubject(subjectNumber){
-  const position = +subjectNumber-- 
+  const position = +subjectNumber -1
   return subjects[position]
 }
 
