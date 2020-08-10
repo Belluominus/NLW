@@ -1,28 +1,31 @@
 const Database = require('sqlite-async')
-Database.open(__dirname + '/database.sqlite').then(execute);
 
 function execute(db) {
   //create table
-  db.exec(`
+  return db.exec(`
     CREATE TABLE IF NOT EXISTS proffys (
-      id_proffy INTEGER PRIMARY KEY AUTOINCREMENT,
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
       name TEXT,
       avatar TEXT,
       whatsapp TEXT,
       bio TEXT
     );
+
     CREATE TABLE IF NOT EXISTS classes(
-      id_class INTEGER PRIMARY KEY AUTOINCREMENT,
-      subject TEXT,
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      subject INTEGER,
       cost TEXT,
-      id_proffy INTEGER
+      proffy_id INTEGER
     );
+
     CREATE TABLE IF NOT EXISTS class_schedule(
-      id_schedule INTEGER PRIMARY KEY AUTOINCREMENT,
-      id_class INTEGER,
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      class_id INTEGER,
       weekday INTEGER,
       time_from INTEGER,
       time_to INTEGER
     );
   `)
 }
+
+module.exports = Database.open(__dirname + '/database.sqlite').then(execute);
